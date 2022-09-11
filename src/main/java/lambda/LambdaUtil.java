@@ -1,3 +1,5 @@
+package lambda;
+
 import java.math.BigDecimal;
 import java.util.Map;
 import java.util.function.*;
