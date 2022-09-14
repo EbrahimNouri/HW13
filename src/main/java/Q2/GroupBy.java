@@ -7,10 +7,10 @@ import java.util.stream.Collectors;
 
 public class GroupBy {
     public static void main(String[] args) {
-        List<String> alef = Arrays.asList("geek", "for", "geek");
-        Map<Integer, List<String>> rr2 = alef.stream().collect(Collectors.groupingBy(String::length));
-        Map<Integer, Long> rr1 = alef.stream().collect(Collectors.groupingBy(String::length,Collectors.counting()));
-        System.out.println(rr1);
-        System.out.println(rr2);
+        final List<String> MAIN_LIST = Arrays.asList("ebrahim", "amir", "ali", "reza", "hatef");
+        Map<Integer, List<String>> be = MAIN_LIST.stream().collect(Collectors.groupingBy(String::length));
+        Map<Integer, Long> alef = MAIN_LIST.stream().collect(Collectors.groupingBy(String::length,Collectors.counting()));
+        System.out.println(alef);
+        System.out.println(be);
     }
 }

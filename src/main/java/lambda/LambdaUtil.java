@@ -118,7 +118,7 @@ public class LambdaUtil {
      * @return a function supplier
      */
     public static Supplier<IntUnaryOperator> nMultiplyFunctionSupplier(int n) {
-        return () -> (i) -> i * n;
+        return () -> (x) -> x * n;
     }
 
     /**
@@ -140,8 +140,8 @@ public class LambdaUtil {
     //TODO debug it
     public static UnaryOperator<Function<String, String>> composeWithTrimFunction() {
 
-        return function -> string -> function.apply(string.trim());
-//        return function -> function.compose(s -> s.trim());
+//        return function -> string -> function.apply(string.trim());
+        return function -> function.compose(String::trim);
     }
 
     /**

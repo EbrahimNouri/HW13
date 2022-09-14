@@ -67,7 +67,7 @@ public class Main {
         Map<String, IntUnaryOperator> functionMap = new HashMap<>();
         functionMap.put("increment", x -> x + 1);
         functionMap.put("square", x -> x * x);
-//        functionMap.put("none", x -> x * x);
+        functionMap.put("none", x -> x * x);
 
         IntUnaryOperator incrementFunction = functionLoader.apply(functionMap, "increment");
         IntUnaryOperator squareFunction = functionLoader.apply(functionMap, "square");
